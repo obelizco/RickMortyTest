@@ -1,0 +1,11 @@
+<form autocomplete="off" (ngSubmit)="search()">
+<div class="wrap">
+    <div class="search">
+            <input type="text" name="term"  class="searchTerm" [(ngModel)]="term" placeholder="Nombre de personaje"
+                (input)="pressEnter($event)">
+                <button type="submit" class="searchButton">
+                    <mat-icon mat-list-icon>search</mat-icon>
+                </button> 
+            </div>
+        </div>
+    </form>

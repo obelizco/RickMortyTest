@@ -1,0 +1,44 @@
+.close-icon{
+    transition: 1s ease-in-out;
+    color: rgb(171, 7, 216);
+}
+.close-button{
+    float: right;
+    top: -24px;
+    right: -24px;  
+}
+.close-icon:hover{
+    transform:  rotate(180deg);
+}
+
+::ng-deep .close-button{
+    float: right;
+    top: -52px;
+    right: -52px;
+}
+.modals-location{
+    width: 40vw;
+    height: 20vh;
+
+}
+.information-location{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.type-location{
+    display: flex;
+    flex-direction: row;
+}
+.title-type-location{
+    color: rgb(171, 7, 216);
+    font-size: 20px;
+    font-weight: 700;
+}
+.resumen-type{
+    font-size: 20px;
+    margin-left: 10px;
+}

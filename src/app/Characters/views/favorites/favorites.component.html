@@ -1,0 +1,19 @@
+<h1 class="title">Listado de Favoritos</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px">
+
+    <div fxFlex="18"
+        fxFlex.lg="20"
+        fxFlex.sm="40"
+        fxFlex.md="30"
+         *ngFor="let character of characters">
+       
+        <app-card-character [character]="character"></app-card-character>
+    </div>
+</div>
+
