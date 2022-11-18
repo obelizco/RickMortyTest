@@ -1,0 +1,33 @@
+<mat-card class="card"  >
+    <mat-card-header>
+        <mat-card-title class> {{ character.name }} </mat-card-title>
+        <mat-card-subtitle> {{ character.species }} </mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="character.image">
+
+    <mat-card-content>
+        <h3>Estado: {{ character.status }}</h3>
+        <div>
+            <strong>Ultima localización: </strong>
+            <p class="location" (click)="getLocationId(character.location.url)">
+                {{character.location.name }}</p>
+        </div>
+        <div>
+            <strong>Ultimo episodio: </strong>
+            <p class="lastet-episode"> {{ showLatestEpisode(character.episode) }} </p>
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button color="warn" [routerLink]="['/characters', character.id ]">
+            Ver detalle
+        </button>
+
+        <button mat-button (click)="savedFavorite()">
+            Favorito
+            <mat-icon mat-list-icon>{{showIconFav(character.id)}}</mat-icon>
+        </button>
+    </mat-card-actions>
+
+</mat-card>

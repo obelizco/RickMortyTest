@@ -1,0 +1,43 @@
+<div >
+    <div fxLayout="row">
+        <div  fxFlex="50" fxLayoutAlign="start center">
+            <h1 class="title">Buscar personaje</h1>
+        </div>
+        <div class="position-bar" fxFlex="50" fxLayoutAlign="end center">
+            <app-searchbar fxFlex="100"(onEnter)="search($event)" (onDebounce)="suggestion($event)">
+            </app-searchbar>
+        </div>
+    </div>
+
+    <mat-list  *ngIf="showsuggestion">
+        <mat-list-item class="items-suggestion" *ngFor="let character of charactersuggestion" >
+            <p  [routerLink]="['/characters', character.id ]">
+                {{character.name}}
+            </p>
+        </mat-list-item>
+        <mat-list-item  (click)="searchSuggestion(term)">
+            <p class="items-suggestion">
+                Buscar "{{term}}"
+            </p>
+           
+        </mat-list-item>
+    </mat-list>
+    <hr>
+</div>
+
+
+<div *ngIf="existError" class="alert alert-danger">
+    No se encontró nada con el {{term}}
+</div>
+
+<div *ngIf="characters.length > 0" style="overflow-y:auto; height:700px" fxLayout="row wrap" fxLayout.xs="column"
+    fxLayoutAlign="center" fxLayoutGap="10px">
+
+
+    <div fxFlex="18" fxFlex.lg="20" fxFlex.sm="40" fxFlex.md="30" *ngFor="let character of characters">
+
+        <app-card-character [character]="character"></app-card-character>
+    </div>
+
+
+</div>

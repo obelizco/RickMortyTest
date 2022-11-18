@@ -1,0 +1,45 @@
+<mat-grid-list cols="1" *ngIf="!character; else divcharacter">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<ng-template #divcharacter>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+
+        <div fxFlex="30" class="character">
+            <h1>{{ character.name }}</h1>
+            <mat-divider></mat-divider>
+            <br>
+            <img [src]="character.image">
+            <mat-list>
+                <mat-list-item>Especie: {{ character.species }} </mat-list-item>
+                <mat-list-item>Estado: {{ character.status }} </mat-list-item>
+                <mat-list-item>Genero: {{ character.gender }} </mat-list-item>
+                <mat-list-item>Origen: {{ character.origin.name }} </mat-list-item>
+                <mat-list-item class="location"
+                (click)="getLocationId(character.location.url)">
+                    Locación: {{ character.location.name }} </mat-list-item>
+            </mat-list>
+        </div>
+
+        <div fxFlex="70" class="div-list">
+            <h1>Episodios</h1>
+            <mat-divider></mat-divider>
+            <div class="list-episodes" fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px">
+                <mat-card class="card-episode" *ngFor="let episode of episodes">
+                    {{ episode.name }} - {{episode.episode}}
+                </mat-card>
+            </div>
+            <br>
+            <button mat-button color="warn" (click)="backTo()">
+                Regresar
+            </button>
+        </div>
+
+    </div>
+
+
+</ng-template>
