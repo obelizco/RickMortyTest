@@ -25,9 +25,15 @@ View where the user can see all the characters of the series in the form of card
 -   **Location**
 -   **Last episode**
 
+You also have the option to mark the characters you like as favorites.
+
+## Character Detail
+View so that the user can see more detailed information about the character he selects, such as the list of episodes where he has appeared.
+
 ## Favorite List
 View where the user can review their characters marked as favorites and has the option to remove the favorite option
 
 
 ## Search Characters
 View where the user can filter the list of characters searching by name.
+
