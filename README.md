@@ -1,6 +1,6 @@
 # RickMortyTest
 
-This api project intended to obtain information about the characters, locations and episodes of the animated series Rick & Morty.
+This project intended to obtain information about the characters, locations and episodes of the animated series Rick & Morty.
 
 # Technologies
 
