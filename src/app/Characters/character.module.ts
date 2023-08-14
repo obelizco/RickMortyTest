@@ -15,6 +15,9 @@ import { FavoritesComponent } from './views/favorites/favorites.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { SearchComponent } from './views/search/search.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { LoginComponent } from './views/login/login.component';
+import { SignUpComponent } from './views/sign-up/sign-up.component';
+
 @NgModule({
   declarations: [
     AllCharactersComponent,
@@ -24,20 +27,22 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
     LocationComponent,
     FavoritesComponent,
     SearchComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     CommonModule,
     FlexLayoutModule,
     FormsModule,
     MaterialModule,
-    CharactersRoutingModule, 
+    CharactersRoutingModule,
     InfiniteScrollModule
   ],
-  providers:[
+  providers: [
     UtilsService,
     PersistenceService,
-    
+
   ]
 })
 export class CharacterModule { }

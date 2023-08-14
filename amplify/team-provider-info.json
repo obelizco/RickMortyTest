@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-omar-dev-114934-authRole",
+      "UnauthRoleArn": "arn:aws:iam::851113987044:role/amplify-omar-dev-114934-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::851113987044:role/amplify-omar-dev-114934-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-omar-dev-114934-deployment",
+      "UnauthRoleName": "amplify-omar-dev-114934-unauthRole",
+      "StackName": "amplify-omar-dev-114934",
+      "StackId": "arn:aws:cloudformation:us-west-2:851113987044:stack/amplify-omar-dev-114934/8f8b3830-360b-11ee-80b6-06a863af1ce7",
+      "AmplifyAppId": "d1v9nz2lbdij8v"
+    },
+    "categories": {
+      "auth": {
+        "omar564c62c2": {}
+      }
+    }
+  }
+}
