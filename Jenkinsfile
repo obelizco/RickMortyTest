@@ -1,11 +1,17 @@
+//Jenkins file only to tutorial example
 pipeline {
   agent any
 
-
   tools { nodejs 'nodejs' }
-stages {
 
-
+  stages {
+    /*
+    stage('Cloning Git') {
+      steps {
+        git branch: 'main',  url: 'https://github.com/Marl0nGonzalez/Jenkins-Angular'
+      }
+    }
+    */
     stage('Code Quality Check via SonarQube') {
         steps {
             script {
@@ -22,7 +28,6 @@ stages {
             }
         }
     }
-
 
     stage('Install dependencies') {
       steps {
